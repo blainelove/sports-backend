@@ -11,7 +11,7 @@ class VideosController < ApplicationController
     end
 
     def update
-        @video = Video.find(video_params)
+        @video = Video.find(params[:id])
         @video.update(video_params)
         render json: @video
     end
